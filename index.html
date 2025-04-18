@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namandeep | Interactive Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <script defer src="https://cdn.jsdelivr.net/npm/face-api.js"></script>
+
+</head>
+<body>
+    <!-- Audio Controls -->
+    <div class="audio-controls">
+        <button id="toggle-audio" aria-label="Toggle background audio">
+            <i class="fas fa-music"></i>
+        </button>
+        <audio id="bg-audio" loop>
+            <source src="audio/ambient.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <!-- VR Toggle -->
+    <div class="vr-toggle">
+        <button id="toggle-vr" aria-label="Toggle VR mode">
+            <i class="fas fa-vr-cardboard"></i>
+        </button>
+    </div>
+    <div class="cursor-glow"></div>
+
+    <!-- Intelligent Agent -->
+    <div class="agent-container" id="agent-container">
+        <div class="agent" id="agent">
+            <div class="agent-face">
+                <div class="eyes">
+                    <div class="eye left-eye"></div>
+                    <div class="eye right-eye"></div>
+                </div>
+                <div class="mouth"></div>
+            </div>
+            <div class="agent-message" id="agent-message">Hello! I'm your guide.</div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="#" class="logo"><span>N</span>aman.</a>
+        <div class="menu-icon" id="menu-icon">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="theme-toggle" id="theme-toggle">
+            <i class="fas fa-moon"></i>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3 class="greeting">Hello, I'm</h3>
+            <h1 class="name">Namandeep Singh</h1>
+            <h3 class="profession">And I'm a <span class="typed-text"></span></h3>
+            <p class="intro">A tech enthusiast skilled in full-stack development, AI/ML, and building real-world solutions through innovative design and code.</p>
+            <div class="social-media">
+                <a href="https://github.com/" class="social-icon" aria-label="GitHub" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>    
+
+                <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/naman-deep-singh-9444ab274/" class="social-icon" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="button-group">
+                <a href="/NamanResume.pdf" class="btn btn-primary" target="_blank" title="Click to download my CV">Download CV <i class="fas fa-download"></i></a>
+
+                
+                <a href="#contact" class="btn btn-secondary">Hire Me <i class="fas fa-paper-plane"></i></a>
+            </div>
+        </div>
+        <div class="home-img">
+            <div class="image-container">
+                <img src="img/profiledp.png" alt="Namandeep" class="profile-img">
+                <div class="circle-spin"></div>
+                <div class="tech-icons">
+                    <i class="fab fa-html5" style="--i:0"></i>
+                    <i class="fab fa-css3-alt" style="--i:1"></i>
+                    <i class="fab fa-js" style="--i:2"></i>
+                    <i class="fab fa-react" style="--i:3"></i>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <a href="#about"><i class="fas fa-chevron-down"></i></a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="img/about-img.png" alt="About Mark" class="about-image">
+            <div class="experience-badge">
+                <span class="years">3+</span>
+                <span class="text">Years Experience</span>
+            </div>
+            <div class="qr-code" id="qr-code">
+                <img src="img/qr-code.png" alt="Scan for AR Experience">
+                <p>Scan for AR Demo</p>
+            </div>
+        </div>
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>Full Stack Developer</h3>
+            <p>I specialize in creating immersive experiences that blend physical and digital worlds. My work focuses on intuitive interfaces that engage multiple senses.</p>
+            
+            <div class="skills-progress">
+                <div class="skill">
+                    <div class="skill-info">
+                        <span>Website Devlopment</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress ar-vr"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-info">
+                        <span>3D Animation</span>
+                        <span>85%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress animation"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-info">
+                        <span>AI ML</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress ui"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-titles">
+                <p class="tab-links active-link" onclick="openTab(event, 'skills')">Skills</p>
+                <p class="tab-links" onclick="openTab(event, 'experience')">Experience</p>
+                <p class="tab-links" onclick="openTab(event, 'education')">Education</p>
+            </div>
+            
+            <div class="tab-contents active-tab" id="skills">
+                <ul>
+                    <li><span>AR/VR</span><br>Developing immersive mixed reality experiences</li>
+                    <li><span>Multimodal UI</span><br>Designing interfaces with visual, auditory, and haptic feedback</li>
+                    <li><span>3D Modeling</span><br>Creating assets for digital environments</li>
+                </ul>
+            </div>
+            
+            <div class="tab-contents" id="experience">
+                <ul>
+                    <li><span>2022 - Current</span><br>XR Developer at ImmersiveTech</li>
+                    <li><span>2020 - 2022</span><br>UI/UX Designer at Digital Frontiers</li>
+                    <li><span>2019 - 2020</span><br>Intern at Reality Labs</li>
+                </ul>
+            </div>
+            
+            <div class="tab-contents" id="education">
+                <ul>
+                    <li><span>2027</span><br>Btech From IIIT Delhi</li>
+                    <li><span>2023</span><br>St. Kabir Modern School Class 12th</li>
+                    <!-- <li><span>2017</span><br>AR/VR Development Certification</li> -->
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2 class="heading">My <span>Services</span></h2>
+        <div class="services-container">
+            <div class="service-box">
+                <i class="fas fa-vr-cardboard"></i>
+                <h3>AR/VR Development</h3>
+                <p>Creating immersive mixed reality experiences for various platforms and devices.</p>
+                <a href="#" class="btn btn-secondary">Learn More</a>
+                <div class="service-hover-effect"></div>
+            </div>
+            
+            <div class="service-box">
+                <i class="fas fa-hand-pointer"></i>
+                <h3>Multimodal UI</h3>
+                <p>Designing interfaces that engage multiple senses for richer interactions.</p>
+                <a href="#" class="btn btn-secondary">Learn More</a>
+                <div class="service-hover-effect"></div>
+            </div>
+            
+            <div class="service-box">
+                <i class="fas fa-cube"></i>
+                <h3>3D Modeling</h3>
+                <p>Creating detailed 3D assets for games, simulations, and virtual environments.</p>
+                <a href="#" class="btn btn-secondary">Learn More</a>
+                <div class="service-hover-effect"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading">Latest <span>Projects</span></h2>
+        
+        <div class="portfolio-filter">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="Frontend">Frontend</button>
+            <button class="filter-btn" data-filter="Backend">Backend</button>
+            <button class="filter-btn" data-filter="Full Stack">Full Stack</button>
+        </div>
+        
+        <div class="portfolio-container">
+            <div class="portfolio-box" id="project-ar-1" data-category="Frontend">
+                <img src="img/portfolio1.png" alt="Frontend1">
+                <div class="portfolio-layer">
+                    <h4>Medical Reminder and Pill Scanner</h4>
+                    <p>Unpacked pill Scanner for identification</p>
+                    <a href="https://github.com/swarit-kumar/PILLPAL-Medical-Application" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+                <div class="portfolio-3d-effect"></div>
+            </div>
+            
+            <div class="portfolio-box" id="project-vr-1" data-category="Frontend">
+                <img src="img/portfolio2.png" alt="VR Training Simulation">
+                <div class="portfolio-layer">
+                    <h4>Poster of Indian Constitution</h4>
+                    <!-- <p</p> -->
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+                <div class="portfolio-3d-effect"></div>
+            </div>
+            
+            <div class="portfolio-box" id="project-vr-2" data-category="Backend">
+                <img src="img/portfolio3.png" alt="3D Product Visualization">
+                <div class="portfolio-layer">
+                    <h4>Angry Bird Game</h4>
+                    <p>Angry Bird Game using OOPS Java</p>
+                    <a href="https://github.com/swarit-kumar/Angry-Bird-Game" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+                <div class="portfolio-3d-effect"></div>
+            </div>
+            
+            <div class="portfolio-box" id="project-ar-2" data-category="Full Stack">
+                <img src="img/portfolio4.png"  alt="AR Marketing Campaign">
+                <div class="portfolio-layer">
+                    <h4>Blood Bank Management</h4>
+                    <!-- <p>Interactive AR campaign for product launches and brand engagement.</p> -->
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+                <div class="portfolio-3d-effect"></div>
+            </div>
+            
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section with Social Proof -->
+    <section class="testimonials" id="testimonials">
+        <h2 class="heading">Client <span>Testimonials</span></h2>
+        
+        <div class="social-proof">
+            <div class="social-proof-item">
+                <i class="fas fa-users"></i>
+                <span class="count" id="visitor-count">1245</span>
+                <span>Visitors This Week</span>
+            </div>
+            <div class="social-proof-item">
+                <i class="fas fa-heart"></i>
+                <span class="count" id="like-count">872</span>
+                <span>Project Likes</span>
+            </div>
+            <div class="social-proof-item">
+                <i class="fas fa-comments"></i>
+                <span class="count" id="comment-count">156</span>
+                <span>Comments</span>
+            </div>
+        </div>
+        
+        <div class="testimonial-container swiper">
+            <div class="swiper-wrapper">
+                <div class="testimonial-box swiper-slide">
+                    <div class="client-info">
+                        <img src="img/client1.png" alt="Client 1">
+                        <div>
+                            <h4>Rohan Kumar</h4>
+                            <span>CEO, TechStart</span>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"Naman's AR implementation increased our user engagement by 300%. His multimodal approach created an unforgettable brand experience."</p>
+                </div>
+                
+                <div class="testimonial-box swiper-slide">
+                    <div class="client-info">
+                        <img src="img/client2.png" alt="Client 2">
+                        <div>
+                            <h4>Harpreet Singh</h4>
+                            <span>Marketing Director, BrandUp</span>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"The VR training module Naman developed reduced our onboarding time by 40%. The haptic feedback integration was particularly effective."</p>
+                </div>
+                
+                <div class="testimonial-box swiper-slide">
+                    <div class="client-info">
+                        <img src="img/client3.png" alt="Client 3">
+                        <div>
+                            <h4>Sohan</h4>
+                            <span>Founder, DesignHub</span>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"Working with Naman was transformative. His 3D product configurator increased our conversion rates by 65% through its intuitive multimodal interface."</p>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        
+        <div class="live-feedback">
+            <h3>Leave Your Feedback</h3>
+            <form id="feedback-form">
+                <input type="text" placeholder="Your Name" required>
+                <textarea placeholder="Your Feedback" required></textarea>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <div class="viewer-notification" id="viewer-notification">
+                <i class="fas fa-users"></i>
+                <span id="active-viewers">5 people</span> are currently viewing this portfolio
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me</span></h2>
+        
+        <form action="#" class="contact-form" id="contact-form">
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="text" placeholder="Full Name" id="name" required>
+                    <span class="focus"></span>
+                </div>
+                <div class="input-field">
+                    <input type="email" placeholder="Email Address" id="email" required>
+                    <span class="focus"></span>
+                </div>
+            </div>
+            
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="tel" placeholder="Phone Number" id="phone">
+                    <span class="focus"></span>
+                </div>
+                <div class="input-field">
+                    <input type="text" placeholder="Subject" id="subject">
+                    <span class="focus"></span>
+                </div>
+            </div>
+            
+            <div class="textarea-field">
+                <textarea cols="30" rows="10" placeholder="Your Message" id="message" required></textarea>
+                <span class="focus"></span>
+            </div>
+            
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Send Message <i class="fas fa-paper-plane"></i></button>
+                <div class="haptic-feedback">
+                    <label>
+                        <input type="checkbox" id="haptic-toggle" checked>
+                        Enable Haptic Feedback
+                    </label>
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <a href="#"><span>N</span>aman.</a>
+                <p>Bridging digital and physical experiences.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-services">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Web Development</a></li>
+                    <li><a href="#">Backend Development</a></li>
+                    <li><a href="#">Machine Learning</a></li>
+                    <li><a href="#">Generative Ai</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h3>Get In Touch</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Delhi</p>
+                <p><i class="fas fa-envelope"></i> snamandeep40@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +91 999999999</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2023 Namandeep Singh. All Rights Reserved.</p>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <!-- <script defer src="https://cdn.jsdelivr.net/npm/face-api.js"></script> -->
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+    <!-- Then your script -->
+    <script defer src="script.js"></script>
+</body>
+</html>
